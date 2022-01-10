@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ORDER</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="payment.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script>
+      function myFunction(x) {
+        x.style.background = "yellow";
+      }
+
+      function keyFunction() {
+        alert("You enter a key inside the input");
+      }
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img class="imag1" src="img/logo.png" />My Profile</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="main.html">Home</a>
+            <a class="nav-link" href="mylecture.html">My Lecture</a>
+            <a class="nav-link" href="mybook.html">My Books</a>
+            <a class="nav-link" aria-current="page" href="order.html">Order</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="order">
+      <div class="max-width">
+        <div class="order-content">
+          <div class="column left">
+            <div class="text">
+              <form id="cart-hplus">
+                <h3>Algorithms Unlocked</h3>
+                <p>Price RM90</p>
+                <label>Quantity desired :</label>
+                <input
+                  type="text"
+                  name="Algorithms"
+                  id="txt-q-algorit"
+                  placeholder=""
+                  onkeypress="keyFunction()"
+                  onfocus="myFunction(this)"
+                />
+
+                <h3>Clean Code</h3>
+                <p>Price RM25</p>
+                <label>Quantity desired :</label>
+                <input
+                  type="text"
+                  name="clean code"
+                  id="txt-q-clean"
+                  placeholder=""
+                  onkeypress="keyFunction()"
+                  onfocus="myFunction(this)"
+                />
+
+                <h3>The Art Of Computer Programming</h3>
+                <p>Price RM30</p>
+                <label>Quantity desired :</label>
+                <input
+                  type="text"
+                  name="program"
+                  id="txt-q-program"
+                  placeholder=""
+                  onkeypress="keyFunction()"
+                  onfocus="myFunction(this)"
+                /><br />
+                <button onclick="klik()">Display total</button>
+              </form>
+            </div>
+          </div>
+          <div class="column right">
+            <div class="text">
+              <form id="cart-hplus">
+                <h3>Estimate Order</h3>
+                <br />
+                <label>State (required):</label>
+                <select id="s-state" onchange="getValue()">
+                  <option value="">Select</option>
+                  <option value="Sbw">Sibu</option>
+                  <option value="Btu">Bintulu</option>
+                  <option value="Myy">Miri</option>
+                </select>
+
+                <div class="group method">
+                  <label for="r-method-pickup">Shipping and Handling:</label
+                  ><br />
+                  <input
+                    type="radio"
+                    value="pickup"
+                    name="r_method"
+                    id="r-method-pickup"
+                    checked
+                  />
+                  <label for="r-method-pickup">Pickup (free)</label><br />
+
+                  <input
+                    type="radio"
+                    value="usps"
+                    name="r_method"
+                    id="r-method-usps"
+                  />
+                  <label for="r-method-usps">US Mail ($2/item)</label><br />
+
+                  <input
+                    type="radio"
+                    value="ups"
+                    name="r_method"
+                    id="r-method-ups"
+                  />
+                  <label for="r-method-ups">UPS ($3/item)</label>
+                </div>
+
+                <div class="group calc">
+                  <p>
+                    <label for="btn-estimate">Click to estimate:</label><br />
+                    <input
+                      type="submit"
+                      value="Estimate Total"
+                      id="btn-estimate"
+                    />
+                    <input type="text" id="txt-estimate" placeholder="$0.00" />
+                  </p>
+                </div>
+                <div id="result"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

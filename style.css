@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.imag1{
+    width: 50px;
+    height: 50px;
+}
+
+.imag{
+    width: 200px;
+    height: 200px;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgba(0, 195, 255, 0.699);
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: rgba(0, 195, 255, 0.699);
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span{
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: rgba(0, 195, 255, 0.699);
+}
+
+.navbar.sticky .menu li a:hover{
+    color: black;
+}
+
+.home{
+    display: flex;
+    background: url(img/bgfa.jpg) no-repeat;
+    height: 100vh;
+    color: white;
+    margin: auto;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text1{
+    font-size: 27px;
+    color: black;
+}
+
+.home .home-content .text2{
+    font-size: 75px;
+    font-weight: 60;
+    margin-left: -3;
+    color: black;
+}
+
+.home .home-content .text3{
+    font-size: 40px;
+    margin: 5px 0;
+    color: black;
+}
+
+.home .home-content .text3 span{
+    color: rgba(0, 195, 255, 0.699);
+    font-weight: 500;
+}
+
+.about{
+    display: flex;
+    height: 100vh;
+    color: white;
+    margin: auto;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.about .about-content .text2{
+    font-size: 75px;
+    text-align: center;
+    font-weight: 60;
+    color: black;
+}
+
+.about .about-content .text3{
+    font-size: 40px;
+    color: black;
+}
+
+.about .about-content .text3 span{
+    color: rgba(0, 195, 255, 0.699);
+    font-weight: 500;
+}
+
+.about .about-content a{
+    display: inline-block;
+    background: rgba(0, 195, 255, 0.699);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgba(0, 195, 255, 0.699);
+    transition: all 0.2s ease;
+}
+
+.about .about-content a:hover{
+    color: rgba(0, 195, 255, 0.699);
+    background: none;
+}
+
+section{
+    padding: 100px 0;
+}
+
+.profile{
+    font-family: 'Poppin', sans-serif;
+    background-color: rgba(0, 195, 255, 0.699);
+}
+
+.profile .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.profile .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+
+.profile .profile-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .profile-content .left {
+    width: 45%;
+}
+
+.profile .profile-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.profile .profile-content .right {
+    width: 45%;
+}
+
+.profile .profile-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.profile .profile-content .right p{
+    text-align: justify;
+}
+
+.profile .profile-content .column{
+    width: 50%;
+}
+
+.contact .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.contact .title::after{
+    content: "get in touch";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgba(0, 195, 255, 0.699);
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: rgba(0, 195, 255, 0.699);
+
+}
+
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.contact .contact-content .right {
+    width: 45%;
+}
+
+.contact .right form .field{
+    display: flex;
+}
+
+.contact .right form .field .field{
+    height: 45px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-right: 10px;
+}
+
+.contact .right form .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(0, 255, 221, 0.699);
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+
+}
+
+.lecture{
+    display: flex;
+    background: url(img/bgfa.jpg) no-repeat;
+    height: 100vh;
+    margin: auto;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.book{
+    display: cover;
+    background: url(img/bgfa.jpg);
+    margin: auto;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.book .book-content a{
+    display: inline-block;
+    background: rgba(0, 195, 255, 0.699);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgba(0, 195, 255, 0.699);
+    transition: all 0.2s ease;
+}
+
+.book .book-content a:hover{
+    color: rgba(0, 195, 255, 0.699);
+    background: none;
+}
+
+.order{
+    display: flex;
+    background: url(img/bgfa.jpg) no-repeat;
+    color: white;
+    margin: auto;
+    height: 100vh;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.order .order-content{
+    background:rgb(15,15,15,0.7);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order .order-content .left {
+    width: 45%;
+}
+
+.order .order-content .left .text{
+    margin-left: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.order .order-content .left p{
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.order .order-content .left a{
+    display: inline-block;
+    background: rgba(0, 195, 255, 0.699);
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 6px;
+    border: 2px solid rgba(0, 195, 255, 0.699);
+    transition: all 0.2s ease;
+}
+
+.order .order-content .column{
+    width: 50%;
+}
+
+.order .order-content .right {
+    width: 45%;
+}
+
+.order .order-content .right .text{
+    margin-left: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.order .order-content .right p{
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.order .order-content .right a{
+    display: inline-block;
+    background: rgba(0, 195, 255, 0.699);
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 6px;
+    border: 2px solid rgba(0, 195, 255, 0.699);
+    transition: all 0.2s ease;
+}
